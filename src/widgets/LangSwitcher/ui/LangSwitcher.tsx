@@ -21,8 +21,6 @@ export const LangSwitcher: React.FC<LangSwitcherProps> = ({ className }) => {
       className={classNames(cls.LangSwitcher, {}, [className])}
     >
       {t("Язык")}
-      {t('rr')}
-      
     </Button>
   );
 };

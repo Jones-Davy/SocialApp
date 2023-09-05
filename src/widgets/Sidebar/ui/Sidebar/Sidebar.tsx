@@ -18,7 +18,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   return (
     <div
       className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
-        className,
+        className ? className : "",
       ])}
     >
       <Button onClick={onToggle}>toggle</Button>

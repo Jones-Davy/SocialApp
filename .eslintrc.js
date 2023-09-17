@@ -37,7 +37,7 @@ module.exports = {
     "@typescript-eslint/prefer-nullish-coalescing": "off",
     "@typescript-eslint/comma-dangle": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/explicit-function-return-type": ["warning", "always"],
+    // "@typescript-eslint/explicit-function-return-type": [1, "always"],
     "react/prop-types": "off",
     "@typescript-eslint/quotes": ["error", "double"],
     "@typescript-eslint/semi": ["error", "always"],

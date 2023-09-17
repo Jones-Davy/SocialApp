@@ -19,12 +19,9 @@ module.exports = {
   },
   overrides: [
     {
-      env: {
-        node: true,
-      },
-      files: [".eslintrc.{js,cjs}"],
-      parserOptions: {
-        sourceType: "script",
+      files: ["**/src/**/*.test.{ts,tsx}"],
+      rules: {
+        "i18next/no-literal-string": "off",
       },
     },
   ],
@@ -37,13 +34,21 @@ module.exports = {
     "@typescript-eslint/prefer-nullish-coalescing": "off",
     "@typescript-eslint/comma-dangle": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    // "@typescript-eslint/explicit-function-return-type": [1, "always"],
+    "@typescript-eslint/explicit-function-return-type": "off",
     "react/prop-types": "off",
     "@typescript-eslint/quotes": ["error", "double"],
     "@typescript-eslint/semi": ["error", "always"],
     "react/react-in-jsx-scope": "off",
-    "react/require-default-props": "off",
-    "i18next/no-literal-string": ["error", { markupOnly: true }],
-    "@typescript-eslint/consistent-type-imports": "off"
+    "i18next/no-literal-string": [
+      "error",
+      {
+        markupOnly: true,
+        ignoreAttribute: ["data-testid", "to"],
+      },
+    ],
+    "@typescript-eslint/consistent-type-imports": "off",
+    "@typescript-eslint/no-floating-promises": "warn",
+    "@typescript-eslint/naming-convention": "warn",
+    "react/no-deprecated": "warn"
   },
 };

@@ -8,6 +8,7 @@ import { FC, Suspense } from "react";
 
 const App: FC = () => {
   const { theme } = useTheme();
+  console.log("test CI");
 
   return (
     <div className={classNames("app", {}, [theme])}>

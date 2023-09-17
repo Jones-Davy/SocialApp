@@ -1,16 +1,11 @@
-name: linting, testing, building
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+name: CI lints, tests, building
+on: [push, pull_request]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [17.x]
-
+        node-version: [ 17.x ]
     steps:
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
@@ -26,8 +21,5 @@ jobs:
       - name: linting css
         run: npm run lint:scss
       - name: unit testing
-        run: npm run test:unit
-      # - name: build storybook
-      #   run: npm run storybook:build
-      # - name: screenshot testing
-      #   run: npm run test:ui:ci
+        run: npm run unit
+

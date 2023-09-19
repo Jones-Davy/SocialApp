@@ -1,14 +1,14 @@
-import { classNames } from "shared/lib/classNames/classNames";
-import cls from "./Sidebar.module.scss";
-import { useState } from "react";
-import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button/Button";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher";
-import { LangSwitcher } from "widgets/LangSwitcher";
-import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { useTranslation } from "react-i18next";
-import { RoutePath } from "shared/config/routeConfig/routeConfig";
-import AboutIcon from "shared/assets/icons/about-20-20.svg";
-import MainIcon from "shared/assets/icons/main-20-20.svg";
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './Sidebar.module.scss';
+import { useState } from 'react';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { LangSwitcher } from 'widgets/LangSwitcher';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { useTranslation } from 'react-i18next';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import AboutIcon from 'shared/assets/icons/about-20-20.svg';
+import MainIcon from 'shared/assets/icons/main-20-20.svg';
 
 interface SidebarProps {
   className?: string;
@@ -26,7 +26,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
     <div
       data-testid="sidebar"
       className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
-        className || "",
+        className || '',
       ])}
     >
       <Button
@@ -36,7 +36,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
         theme={ButtonTheme.BACKGROUND_INVERTED}
         size={ButtonSize.L}
       >
-        {collapsed ? ">" : "<"}
+        {collapsed ? '>' : '<'}
       </Button>
       <div className={cls.items}>
         <div className={cls.item}>
@@ -47,7 +47,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
           >
             <MainIcon className={cls.icon} />
 
-            <span className={cls.link}> {t("Главная")}</span>
+            <span className={cls.link}> {t('Главная')}</span>
           </AppLink>
         </div>
 
@@ -58,7 +58,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
             className={cls.item}
           >
             <AboutIcon className={cls.icon} />
-            <span className={cls.link}> {t("О сайте")}</span>
+            <span className={cls.link}> {t('О сайте')}</span>
           </AppLink>
         </div>
       </div>

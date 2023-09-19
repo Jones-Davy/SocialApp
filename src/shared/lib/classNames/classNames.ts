@@ -12,5 +12,5 @@ export const classNames = (
       .filter(([_, value]) => Boolean(value))
       .map(([className]) => className)
   ]
-    .join(" ");
+    .join(' ');
 };

@@ -1,33 +1,33 @@
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from 'shared/lib/classNames/classNames';
 
-describe("classNames", () => {
-  test("with only first param", () => {
-    expect(classNames("someClass")).toBe("someClass");
+describe('classNames', () => {
+  test('with only first param', () => {
+    expect(classNames('someClass')).toBe('someClass');
   });
 
-  test("with additional class", () => {
-    const expected = "someClass class1 class2";
-    expect(classNames("someClass", {}, ["class1", "class2"])).toBe(expected);
+  test('with additional class', () => {
+    const expected = 'someClass class1 class2';
+    expect(classNames('someClass', {}, ['class1', 'class2'])).toBe(expected);
   });
 
-  test("with mods", () => {
-    const expected = "someClass class1 class2 hovered visible";
+  test('with mods', () => {
+    const expected = 'someClass class1 class2 hovered visible';
     expect(
       classNames(
-        "someClass",
+        'someClass',
         { hovered: true, scroll: false, visible: true },
-        ["class1", "class2"]
+        ['class1', 'class2']
       )
     ).toBe(expected);
   });
 
-  test("with undefined mode", () => {
-    const expected = "someClass class1 class2 visible";
+  test('with undefined mode', () => {
+    const expected = 'someClass class1 class2 visible';
     expect(
       classNames(
-        "someClass",
+        'someClass',
         { hovered: undefined, scroll: false, visible: true },
-        ["class1", "class2"]
+        ['class1', 'class2']
       )
     ).toBe(expected);
   });

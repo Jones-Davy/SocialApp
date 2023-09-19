@@ -10,14 +10,15 @@ interface ErrorBoundaryState {
 }
 
 class ErrorBoundary extends React.Component<
-  ErrorBoundaryProps,
-  ErrorBoundaryState
+ErrorBoundaryProps,
+ErrorBoundaryState
 > {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
 
+  // eslint-disable-next-line n/handle-callback-err
   static getDerivedStateFromError(error: Error) {
     return { hasError: true };
   }

@@ -56,5 +56,7 @@ module.exports = {
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/no-var-requires': 'warn',
     'promise/param-names': 'off',
+    '@typescript-eslint/indent': 'off',
+    'react/display-name': 'off',
   },
 };

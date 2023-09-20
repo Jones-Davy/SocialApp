@@ -17,6 +17,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  globals: {
+    __IS_DEV__: true,
+  },
   overrides: [
     {
       files: ['**/src/**/*.test.{ts,tsx}'],

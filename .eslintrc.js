@@ -47,7 +47,7 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', 'to'],
+        ignoreAttribute: ['data-testid', 'to', 'reducerKey'],
       },
     ],
     '@typescript-eslint/consistent-type-imports': 'off',
@@ -61,5 +61,6 @@ module.exports = {
     'promise/param-names': 'off',
     '@typescript-eslint/indent': 'off',
     'react/display-name': 'off',
+    '@typescript-eslint/no-dynamic-delete': 'warn',
   },
 };
